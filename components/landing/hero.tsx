@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["CMS", "CRM", "RPA", "Integrációs platform", "Analitika"],
+    () => ["CMS", "CRM", "RPA", "Automatizáció", "Analitika"],
     []
   );
 

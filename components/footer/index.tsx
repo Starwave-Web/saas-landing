@@ -1,53 +1,54 @@
+import { Orbit } from "lucide-react";
 import Link from "next/link";
 // import { Footer } from "react-day-picker";
 
 export const Footer = () => {
   const navigationItems = [
     {
-      title: "Home",
+      title: "Kezdőlap",
       href: "/",
       description: "",
     },
     {
-      title: "Product",
+      title: "Platform",
       description: "Managing a small business today is already tough.",
       items: [
         {
-          title: "Reports",
+          title: "Funkciók",
           href: "/reports",
         },
         {
-          title: "Statistics",
+          title: "Statisztikák",
           href: "/statistics",
         },
         {
-          title: "Dashboards",
+          title: "Technológiák",
           href: "/dashboards",
         },
         {
-          title: "Recordings",
+          title: "Árak",
           href: "/recordings",
         },
       ],
     },
     {
-      title: "Company",
+      title: "Cég",
       description: "Managing a small business today is already tough.",
       items: [
         {
-          title: "About us",
+          title: "Rólunk",
           href: "/about",
         },
         {
-          title: "Fundraising",
+          title: "Visszajelzések",
           href: "/fundraising",
         },
         {
-          title: "Investors",
+          title: "FAQ",
           href: "/investors",
         },
         {
-          title: "Contact us",
+          title: "Kapcsolatfelvétel",
           href: "/contact",
         },
       ],
@@ -60,22 +61,29 @@ export const Footer = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center px-4">
           <div className="flex gap-8 flex-col items-start">
             <div className="flex gap-2 flex-col">
-              <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">
-                OrbitOps
-              </h2>
+              <div className="flex items-center gap-2">
+                <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">
+                  OrbitOps
+                </h2>
+                <Orbit className="dark:text-white h-10 w-10" />
+              </div>
+
               <p className="text-lg max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                Managing a small business today is already tough.
+                Integrált üzleti megoldásokat kínálunk egy platformon: CRM, CMS,
+                RPA, analitika és integrációs lehetőségek segítségével
+                automatizáljuk folyamataidat, növeljük a hatékonyságot, és valós
+                idejű adatokat biztosítunk döntéseidhez.
               </p>
             </div>
             <div className="flex gap-20 flex-row">
               <div className="flex flex-col text-sm max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                <p>1 Tailwind Way</p>
-                <p>Menlo Park</p>
-                <p>CA 94025</p>
+                <p>2440</p>
+                <p>Százhalombatta</p>
+                <p>Tél utca 41.</p>
               </div>
               <div className="flex flex-col text-sm max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                <Link href="/">Terms of service</Link>
-                <Link href="/">Privacy Policy</Link>
+                <Link href="/">Felhasználási feltételek</Link>
+                <Link href="/">Adatkezelési nyilatkozat</Link>
               </div>
             </div>
           </div>
@@ -118,5 +126,4 @@ export const Footer = () => {
   );
 };
 
-
-export default Footer
+export default Footer;

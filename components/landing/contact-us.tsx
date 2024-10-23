@@ -71,7 +71,7 @@ const ContactUs = () => {
           </div>
 
           <div className="justify-center flex items-center">
-            <div className="rounded-md max-w-sm flex flex-col border p-8 gap-4">
+            <div className="rounded-md max-w-sm flex flex-col border p-8 gap-4 w-full">
               <p>Foglalj időpontot</p>
               <div className="grid w-full max-w-sm items-center gap-1">
                 <Label htmlFor="picture">Dátum</Label>

@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Menu, MoveRight, X } from "lucide-react";
+import { Menu, MoveRight, Orbit, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { ModeToggle } from "../common/toggle-theme";
@@ -121,8 +121,9 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="flex lg:justify-center">
+        <div className="flex gap-1 lg:justify-center">
           <p className="font-semibold">OrbitOps</p>
+          <Orbit className=" dark:text-white"/>
         </div>
         <div className="flex justify-end w-full gap-4">
           <ModeToggle />

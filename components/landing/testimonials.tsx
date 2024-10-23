@@ -91,7 +91,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem className="lg:basis-1/2" key={index}>
                   <div className="bg-muted rounded-md h-full lg:col-span-2 p-6 aspect-video flex justify-between flex-col">
-                    <User className="w-8 h-8 stroke-1" />
+                    <User className="w-8 h-8 stroke-1 hidden sm:block" />
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col">
                         <h3 className="text-xl tracking-tight">
@@ -102,10 +102,9 @@ const Testimonials = () => {
                         </p>
                       </div>
                       <p className="flex flex-row gap-2 text-sm items-center">
-                        <span className="text-muted-foreground">By</span>{" "}
                         <Avatar className="h-6 w-6">
                           <AvatarImage className="object-cover" src={testimonial.avatarImageUrl} />
-                          <AvatarFallback>CN</AvatarFallback>
+                          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <span>{testimonial.name}</span>
                       </p>
