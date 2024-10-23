@@ -10,7 +10,7 @@ const Features = () => (
         </div>
         <div className="flex gap-2 flex-col">
           <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
-            Innovatív
+            Innovatív megoldások
           </h2>
           <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground">
             További információért foglalj egy demo-t!
