@@ -10,11 +10,6 @@ import {
 import { User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import Anna from "@/assets/testimonials/anna.jpg";
-import Eszter from "@/assets/testimonials/eszter.jpg";
-import Kati from "@/assets/testimonials/kati.jpg";
-import Laszlo from "@/assets/testimonials/laszlo.jpg";
-import Zoltan from "@/assets/testimonials/zoltan.jpg";
 import { SECTIONS } from "@/constants";
 
 const Testimonials = () => {
