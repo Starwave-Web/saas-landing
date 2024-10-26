@@ -25,7 +25,7 @@ const ContactUs = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let newErrors = { lastName: "", firstName: "" };
+    const newErrors = { lastName: "", firstName: "" };
     let isValid = true;
 
     if (!lastName) {

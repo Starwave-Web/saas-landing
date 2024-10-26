@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Menu, MoveRight, Orbit, X } from "lucide-react";
 import { useState } from "react";
-import Link from "next/link";
 import { ModeToggle } from "../common/toggle-theme";
 import { scrollToSection } from "@/lib/utils";
 import { SECTIONS } from "@/constants";
