@@ -1,6 +1,6 @@
-import { MoveRight, PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+
+import { AskForCallback, Register } from "../ui/client-buttons";
 
 const CTA = () => (
   <div className="w-full py-20 lg:py-40 bg-muted">
@@ -20,12 +20,8 @@ const CTA = () => (
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button className="gap-4" variant="outline">
-            Kérj visszahívást <PhoneCall className="w-4 h-4" />
-          </Button>
-          <Button className="gap-4">
-            Regisztrálj <MoveRight className="w-4 h-4" />
-          </Button>
+          <AskForCallback />
+          <Register />
         </div>
       </div>
     </div>

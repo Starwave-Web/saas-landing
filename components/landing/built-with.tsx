@@ -8,6 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { SECTIONS } from "@/constants";
 
 const BuiltWith = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -48,7 +49,7 @@ const BuiltWith = () => {
   ];
 
   return (
-    <div className="w-full py-20 lg:py-40">
+    <div id={SECTIONS.TECHNOLOGIES} className="w-full py-20 lg:py-40">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-4 md:flex-row items-center">
           <h3 className="text-xl tracking-tighter lg:max-w-xl font-regular text-left">

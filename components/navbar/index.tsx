@@ -13,12 +13,14 @@ import { Menu, MoveRight, Orbit, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { ModeToggle } from "../common/toggle-theme";
+import { scrollToSection } from "@/lib/utils";
+import { SECTIONS } from "@/constants";
 
 const Navbar = () => {
   const navigationItems = [
     {
       title: "Kezdőlap",
-      href: "/",
+      sectionName: SECTIONS.HERO,
       description: "",
     },
     {
@@ -27,19 +29,19 @@ const Navbar = () => {
       items: [
         {
           title: "Funkciók",
-          href: "/reports",
+          sectionName: SECTIONS.FEATURES,
         },
         {
           title: "Statisztikák",
-          href: "/statistics",
+          sectionName: SECTIONS.STATS,
         },
         {
           title: "Technológiák",
-          href: "/dashboards",
+          sectionName: SECTIONS.TECHNOLOGIES,
         },
         {
           title: "Árak",
-          href: "/recordings",
+          sectionName: SECTIONS.PRICES,
         },
       ],
     },
@@ -48,20 +50,16 @@ const Navbar = () => {
       description: "További információért, foglalj telefonos időpontot.",
       items: [
         {
-          title: "Rólunk",
-          href: "/about",
-        },
-        {
           title: "Visszajelzések",
-          href: "/fundraising",
+          sectionName: SECTIONS.TESTIMONIALS,
         },
         {
           title: "FAQ",
-          href: "/investors",
+          sectionName: SECTIONS.FAQ,
         },
         {
           title: "Kapcsolatfelvétel",
-          href: "/contact",
+          sectionName: SECTIONS.CONTACT_US,
         },
       ],
     },
@@ -76,9 +74,11 @@ const Navbar = () => {
             <NavigationMenuList className="flex justify-start gap-4 flex-row">
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
-                  {item.href ? (
+                  {item.sectionName ? (
                     <>
-                      <NavigationMenuLink>
+                      <NavigationMenuLink
+                        onClick={() => scrollToSection(item.sectionName)}
+                      >
                         <Button variant="ghost">{item.title}</Button>
                       </NavigationMenuLink>
                     </>
@@ -96,14 +96,16 @@ const Navbar = () => {
                                 {item.description}
                               </p>
                             </div>
-                            <Button size="sm" className="mt-10">
-                              Foglalj egy megbeszélést
+                            <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)} size="sm" className="mt-10">
+                              Foglalj egy időpontot
                             </Button>
                           </div>
-                          <div className="flex flex-col text-sm h-full justify-end">
+                          <div className="flex flex-col text-sm h-full justify-start">
                             {item.items?.map((subItem) => (
                               <NavigationMenuLink
-                                href={subItem.href}
+                                onClick={() =>
+                                  scrollToSection(subItem.sectionName)
+                                }
                                 key={subItem.title}
                                 className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4 rounded"
                               >
@@ -121,17 +123,17 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="flex gap-1 lg:justify-center">
+        <div onClick={() => scrollToSection(SECTIONS.HERO)} className="flex gap-1 lg:justify-center cursor-pointer">
           <p className="font-semibold">OrbitOps</p>
-          <Orbit className=" dark:text-white"/>
+          <Orbit className=" dark:text-white" />
         </div>
         <div className="flex justify-end w-full gap-4">
           <ModeToggle />
-          <Button variant="ghost" className="hidden md:inline">
+          <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)} variant="ghost" className="hidden md:inline">
             Foglalj egy demo-t
           </Button>
           <div className="border-r hidden md:inline">
-            <Button>Kapcsolatfelvétel</Button>
+            <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)}>Kapcsolatfelvétel</Button>
           </div>
         </div>
         <div className="flex w-12 shrink lg:hidden items-end justify-end">
@@ -143,29 +145,29 @@ const Navbar = () => {
               {navigationItems.map((item) => (
                 <div key={item.title}>
                   <div className="flex flex-col gap-2">
-                    {item.href ? (
-                      <Link
-                        href={item.href}
+                    {item.sectionName ? (
+                      <div
+                        onClick={() => scrollToSection(item.sectionName)}
                         className="flex justify-between items-center"
                       >
                         <span className="text-lg">{item.title}</span>
                         <MoveRight className="w-4 h-4 stroke-1 text-muted-foreground" />
-                      </Link>
+                      </div>
                     ) : (
                       <p className="text-lg">{item.title}</p>
                     )}
                     {item.items &&
                       item.items.map((subItem) => (
-                        <Link
+                        <div
                           key={subItem.title}
-                          href={subItem.href}
+                          onClick={() => scrollToSection(subItem.sectionName)}
                           className="flex justify-between items-center"
                         >
                           <span className="text-muted-foreground">
                             {subItem.title}
                           </span>
                           <MoveRight className="w-4 h-4 stroke-1" />
-                        </Link>
+                        </div>
                       ))}
                   </div>
                 </div>

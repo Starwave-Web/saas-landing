@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, Check, MoveRight, PhoneCall } from "lucide-react";
+import { CalendarIcon, Check, MoveRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -11,16 +11,52 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { format } from "date-fns";
+import { format, isBefore, startOfDay } from "date-fns";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { SECTIONS } from "@/constants";
+import { toast } from "@/hooks/use-toast";
 
 const ContactUs = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [errors, setErrors] = useState({ lastName: "", firstName: "" });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    let newErrors = { lastName: "", firstName: "" };
+    let isValid = true;
+
+    if (!lastName) {
+      newErrors.lastName = "Vezetéknév megadása kötelező";
+      isValid = false;
+    }
+    if (!firstName) {
+      newErrors.firstName = "Keresztnév megadása kötelező";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+
+    if (isValid) {
+      setLastName("");
+      setFirstName("");
+      setDate(new Date());
+      toast({
+        title: "Sikeres időpont foglalás!",
+        description: "Hamarosan keresni fogunk!",
+      });
+    }
+  };
+
+  const disablePastDates = (date: Date) => {
+    return isBefore(startOfDay(date), startOfDay(new Date()))
+  }
 
   return (
-    <div className="w-full py-20 lg:py-40">
-      <div className="container max-w-6xl mx-auto px-4">
+    <div id={SECTIONS.CONTACT_US} className="w-full py-20 lg:py-40">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-4">
@@ -71,13 +107,17 @@ const ContactUs = () => {
           </div>
 
           <div className="justify-center flex items-center">
-            <div className="rounded-md max-w-sm flex flex-col border p-8 gap-4 w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="rounded-md max-w-sm flex flex-col border p-8 gap-4 w-full"
+            >
               <p>Foglalj időpontot</p>
               <div className="grid w-full max-w-sm items-center gap-1">
-                <Label htmlFor="picture">Dátum</Label>
+                <Label htmlFor="date">Dátum</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
+                      id="date"
                       variant={"outline"}
                       className={cn(
                         "w-full max-w-sm justify-start text-left font-normal",
@@ -97,6 +137,7 @@ const ContactUs = () => {
                       mode="single"
                       selected={date}
                       onSelect={setDate}
+                      disabled={disablePastDates}
                       initialFocus
                     />
                   </PopoverContent>
@@ -104,17 +145,31 @@ const ContactUs = () => {
               </div>
               <div className="grid w-full max-w-sm items-center gap-1">
                 <Label htmlFor="lastname">Vezetéknév</Label>
-                <Input id="lastname" type="text" />
+                <Input 
+                  id="lastname" 
+                  type="text" 
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  aria-invalid={errors.lastName ? "true" : "false"}
+                />
+                {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
               </div>
               <div className="grid w-full max-w-sm items-center gap-1">
                 <Label htmlFor="firstname">Keresztnév</Label>
-                <Input id="firstname" type="text" />
+                <Input 
+                  id="firstname" 
+                  type="text" 
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  aria-invalid={errors.firstName ? "true" : "false"}
+                />
+                {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
               </div>
 
-              <Button className="gap-4 w-full">
+              <Button type="submit" className="gap-4 w-full">
                 Foglalás <MoveRight className="w-4 h-4" />
               </Button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

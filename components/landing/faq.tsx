@@ -1,4 +1,4 @@
-import { Check, PhoneCall } from "lucide-react";
+import { PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -7,6 +7,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { SECTIONS } from "@/constants";
+import { FAQBtn } from "../ui/client-buttons";
 
 const questions = [
   {
@@ -56,7 +58,7 @@ const questions = [
 ];
 
 const FAQ = () => (
-  <div className="w-full py-20 lg:py-40">
+  <div id={SECTIONS.FAQ} className="w-full py-20 lg:py-40">
     <div className="container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-10">
         <div className="flex gap-10 flex-col">
@@ -75,9 +77,7 @@ const FAQ = () => (
               </p>
             </div>
             <div className="">
-              <Button className="gap-4" variant="outline">
-                Kérdésed van? Foglalj hívást <PhoneCall className="w-4 h-4" />
-              </Button>
+              <FAQBtn />
             </div>
           </div>
         </div>
@@ -87,9 +87,7 @@ const FAQ = () => (
               <AccordionTrigger className="text-left">
                 {question.question}
               </AccordionTrigger>
-              <AccordionContent>
-                {question.answer}
-              </AccordionContent>
+              <AccordionContent>{question.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

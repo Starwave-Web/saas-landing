@@ -1,7 +1,8 @@
+import { SECTIONS } from "@/constants";
 import { MoveDownLeft, MoveUpRight } from "lucide-react";
 
 export const Stats = () => (
-  <div className="w-full py-20 lg:py-40">
+  <div id={SECTIONS.STATS}  className="w-full py-20 lg:py-40">
     <div className="container mx-auto px-4">
       <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 lg:gap-8">
         <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">

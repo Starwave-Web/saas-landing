@@ -3,6 +3,7 @@ import ContactUs from "@/components/landing/contact-us";
 import CTA from "@/components/landing/cta";
 import FAQ from "@/components/landing/faq";
 import Features from "@/components/landing/features";
+import Gallery from "@/components/landing/gallery";
 import Hero from "@/components/landing/hero";
 import Prices from "@/components/landing/prices";
 import Stats from "@/components/landing/stats";
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <Features />
+      <Gallery/>
       <Stats />
       <Testimonials />
       <BuiltWith />

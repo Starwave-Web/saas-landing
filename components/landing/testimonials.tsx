@@ -15,6 +15,7 @@ import Eszter from "@/assets/testimonials/eszter.jpg";
 import Kati from "@/assets/testimonials/kati.jpg";
 import Laszlo from "@/assets/testimonials/laszlo.jpg";
 import Zoltan from "@/assets/testimonials/zoltan.jpg";
+import { SECTIONS } from "@/constants";
 
 const Testimonials = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -80,7 +81,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="w-full py-20 lg:py-40">
+    <div id={SECTIONS.TESTIMONIALS} className="w-full py-20 lg:py-40">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-10">
           <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular text-left">

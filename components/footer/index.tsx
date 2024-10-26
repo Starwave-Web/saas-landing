@@ -1,55 +1,57 @@
+"use client";
+import { SECTIONS } from "@/constants";
+import { scrollToSection } from "@/lib/utils";
 import { Orbit } from "lucide-react";
 import Link from "next/link";
-// import { Footer } from "react-day-picker";
 
 export const Footer = () => {
+
+  const felhasznalasi_felt = "/legal/felhasznalasi_felt.pdf";
+  const adatkezelesi_nyil = "/legal/adatkezelesi_nyil.pdf";
+
   const navigationItems = [
     {
       title: "Kezdőlap",
-      href: "/",
+      sectionName: SECTIONS.HERO,
       description: "",
     },
     {
       title: "Platform",
-      description: "Managing a small business today is already tough.",
+      description: "Probáld ki szolgáltatásunk, foglalj telefonos időpontot.",
       items: [
         {
           title: "Funkciók",
-          href: "/reports",
+          sectionName: SECTIONS.FEATURES,
         },
         {
           title: "Statisztikák",
-          href: "/statistics",
+          sectionName: SECTIONS.STATS,
         },
         {
           title: "Technológiák",
-          href: "/dashboards",
+          sectionName: SECTIONS.TECHNOLOGIES,
         },
         {
           title: "Árak",
-          href: "/recordings",
+          sectionName: SECTIONS.PRICES,
         },
       ],
     },
     {
       title: "Cég",
-      description: "Managing a small business today is already tough.",
+      description: "További információért, foglalj telefonos időpontot.",
       items: [
         {
-          title: "Rólunk",
-          href: "/about",
-        },
-        {
           title: "Visszajelzések",
-          href: "/fundraising",
+          sectionName: SECTIONS.TESTIMONIALS,
         },
         {
           title: "FAQ",
-          href: "/investors",
+          sectionName: SECTIONS.FAQ,
         },
         {
           title: "Kapcsolatfelvétel",
-          href: "/contact",
+          sectionName: SECTIONS.CONTACT_US,
         },
       ],
     },
@@ -65,7 +67,7 @@ export const Footer = () => {
                 <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">
                   OrbitOps
                 </h2>
-                <Orbit className="dark:text-white h-10 w-10" />
+                <Orbit className=" h-10 w-10" />
               </div>
 
               <p className="text-lg max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
@@ -82,8 +84,12 @@ export const Footer = () => {
                 <p>Tél utca 41.</p>
               </div>
               <div className="flex flex-col text-sm max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                <Link href="/">Felhasználási feltételek</Link>
-                <Link href="/">Adatkezelési nyilatkozat</Link>
+                <Link target="_blank" href={felhasznalasi_felt}>
+                  Felhasználási feltételek
+                </Link>
+                <Link target="_blank" href={adatkezelesi_nyil}>
+                  Adatkezelési nyilatkozat
+                </Link>
               </div>
             </div>
           </div>
@@ -94,27 +100,27 @@ export const Footer = () => {
                 className="flex text-base gap-1 flex-col items-start"
               >
                 <div className="flex flex-col gap-2">
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      className="flex justify-between items-center"
+                  {item.sectionName ? (
+                    <p
+                      onClick={() => scrollToSection(item.sectionName)}
+                      className="flex justify-between items-center cursor-pointer"
                     >
                       <span className="text-xl">{item.title}</span>
-                    </Link>
+                    </p>
                   ) : (
                     <p className="text-xl">{item.title}</p>
                   )}
                   {item.items &&
                     item.items.map((subItem) => (
-                      <Link
+                      <p
                         key={subItem.title}
-                        href={subItem.href}
-                        className="flex justify-between items-center"
+                        onClick={() => scrollToSection(subItem.sectionName)}
+                        className="flex justify-between items-center cursor-pointer"
                       >
                         <span className="text-background/75">
                           {subItem.title}
                         </span>
-                      </Link>
+                      </p>
                     ))}
                 </div>
               </div>
