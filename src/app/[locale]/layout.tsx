@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "../globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "@/src/components/navbar";
@@ -13,8 +12,7 @@ import { NextIntlClientProvider } from "next-intl";
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ["latin"] });
 
-
-//@ts-expect-error locale can be any
+//@ts-expect-error anytypeerror
 export async function generateMetadata({params: {locale}}) {
   const t = await getTranslations({locale, namespace: 'metadata'});
  
@@ -32,7 +30,8 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  //@ts-expect-error anytypeerror
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
 
