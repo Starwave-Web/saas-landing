@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "title": "OrbitOps",
+    "description": "Innovatív vállalatirányítási rendszer."
+  },
+  "navbar": {
+    "home": "Kezdőlap",
+    "platform": "Platform",
+    "platformDescription": "Próbáld ki szolgáltatásunk, foglalj telefonos időpontot.",
+    "features": "Funkciók",
+    "stats": "Statisztikák",
+    "technologies": "Technológiák",
+    "prices": "Árak",
+    "company": "Cég",
+    "companyDescription": "További információért, foglalj telefonos időpontot.",
+    "testimonials": "Visszajelzések",
+    "faq": "FAQ",
+    "contactUs": "Kapcsolatfelvétel",
+    "bookAppointment": "Foglalj egy időpontot",
+    "demo": "Foglalj egy demo-t",
+    "orbitOps": "OrbitOps"
+  },
+  "modeToggle": {
+    "selectTheme": "Válassz témát",
+    "light": "Világos",
+    "dark": "Sötét",
+    "system": "Rendszer"
+  },
+  "hero": {
+    "whatCanItDo": "Mit tud?",
+    "platformFeatures": "Funkciók",
+    "integratedBusinessSolutions": "Integrált üzleti megoldásokat kínálunk egy platformon: CRM, CMS, RPA, analitika és integrációs lehetőségek segítségével automatizáljuk folyamataidat, növeljük a hatékonyságot, és valós idejű adatokat biztosítunk döntéseidhez.",
+    "requestCallback": "Kérj visszahívást",
+    "register": "Regisztrálj",
+    "cms": "CMS",
+    "crm": "CRM",
+    "rpa": "RPA",
+    "automation": "Automatizáció",
+    "analytics": "Analitika"
+  },
+  "features": {
+    "badge": "Funkciók",
+    "headline": "Innovatív megoldások",
+    "subheadline": "További információért foglalj egy demo-t!",
+    "fullIntegrationTitle": "Teljes körű integráció",
+    "fullIntegrationDescription": "Zökkenőmentes adatáramlást biztosítunk különböző rendszerek között egyetlen platformon keresztül.",
+    "automatedProcessesTitle": "Automatizált folyamatok",
+    "automatedProcessesDescription": "RPA megoldásaink egyszerűsítik az ismétlődő feladatokat, időt és erőforrást megtakarítva.",
+    "realTimeAnalyticsTitle": "Valós idejű analitika",
+    "realTimeAnalyticsDescription": "Döntéseidhez azonnali betekintést kapsz adataidba, dinamikus és vizuális riportokkal.",
+    "customizableCrmTitle": "Testreszabható CRM",
+    "customizableCrmDescription": "Személyre szabható ügyfélkapcsolat-kezelést kínálunk, amely a vállalkozásod egyedi igényeire épül.",
+    "easyContentManagementTitle": "Egyszerű tartalomkezelés",
+    "easyContentManagementDescription": "Intuitív CMS megoldásunk lehetővé teszi a tartalmak gyors létrehozását és publikálását.",
+    "dataDrivenDecisionMakingTitle": "Adatvezérelt döntéshozatal",
+    "dataDrivenDecisionMakingDescription": "Hatékony analitikai eszközeinkkel könnyedén nyomon követheted üzleti teljesítményed fejlődését."
+  },
+  "stats": {
+    "monthlyActiveUsers": {
+      "value": "5.000",
+      "change": "+20.1%",
+      "description": "havi aktív felhasználó"
+    },
+    "dailyActiveUsers": {
+      "value": "2.105",
+      "change": "+5%",
+      "description": "napi aktív felhasználó"
+    },
+    "averageRevenueGrowth": {
+      "value": "923.520 Ft",
+      "change": "+40%",
+      "description": "átlagos bevételnövekedés ügyfeleinknél"
+    },
+    "userAcquisitionCost": {
+      "value": "3.000 Ft",
+      "change": "-20%",
+      "description": "felhasználónkénti megszerzési költség"
+    }
+  },
+  "testimonials": {
+    "title": "Számos vállalkozás választott minket.",
+    "items": [
+      {
+        "id": "anna",
+        "title": "Egyszerű integráció, hatalmas lehetőségek",
+        "description": "A platformunk rendszereit pár nap alatt integráltuk. Nagyon könnyű használni.",
+        "name": "Kovács Anna"
+      },
+      {
+        "id": "laszlo",
+        "title": "Gyorsan reagál az igényeinkre",
+        "description": "Az analitika segítségével azonnali betekintést kapunk a működésünk javításához.",
+        "name": "Tóth László"
+      },
+      {
+        "id": "eszter",
+        "title": "Automatizált folyamatok, időmegtakarítás",
+        "description": "Az RPA megoldásokkal rengeteg adminisztrációs munkát spóroltunk meg.",
+        "name": "Nagy Eszter"
+      },
+      {
+        "id": "zoltan",
+        "title": "CRM, ami tényleg testreszabható",
+        "description": "Könnyedén testreszabtuk a CRM-et, hogy tökéletesen illeszkedjen az üzleti folyamatainkhoz.",
+        "name": "Szabó Zoltán"
+      },
+      {
+        "id": "kati",
+        "title": "Hatékony tartalomkezelés",
+        "description": "A CMS rendszer intuitív, könnyű vele tartalmakat publikálni több csatornán.",
+        "name": "Varga Katalin"
+      }
+    ]
+  },
+  "builtWith": {
+    "title": "Használt technológiák"
+  },
+  "pricing": {
+    "badge": "Árak",
+    "chooseTheRightOne": "Válaszd ki a neked megfelelőt!",
+    "description": "Fedezd fel platformunk CMS, CRM, RPA és analitikai megoldásait, hogy növeld vállalkozásod versenyképességét! Próbáld ki 14 napig ingyen!",
+    "startup": {
+      "title": "Startup",
+      "description": "Indítsa el vállalkozását egyszerűen, hatékony eszközökkel és támogatással!",
+      "price": "3.000 Ft",
+      "period": " / hónap"
+    },
+    "kkv": {
+      "title": "KKV",
+      "description": "Növelje a hatékonyságot testreszabott megoldásokkal és integrált funkciókkal!",
+      "price": "6.000 Ft",
+      "period": " / hónap"
+    },
+    "premium": {
+      "title": "Prémium",
+      "description": "Maximalizálja potenciálját exkluzív funkciókkal és kivételes támogatással!",
+      "price": "8.000 Ft",
+      "period": " / hónap"
+    },
+    "features": "Funkciók",
+    "crm": "CRM",
+    "cms": "CMS",
+    "rpa": "RPA",
+    "people": "Személyek",
+    "analytics": "Analitika",
+    "integrationPlatform": "Integrációs platform"
+  },
+  "cta": {
+    "badge": "Vágj bele!",
+    "heading": "Automatizáld vállalkozásod most!",
+    "description": "Csökkentsd adminisztrációs terheid, növeld bevételeidet és hozd ki a legtöbbet üzleti adataidból integrált platformunkkal! Próbáld ki most ingyen!"
+  },
+  "buttons": {
+    "tryItOut": "Próbáld ki",
+    "contactUs": "Kapcsolatfelvétel",
+    "askForCallback": "Kérj visszahívást",
+    "register": "Regisztrálj",
+    "faq": "Kérdésed van? Foglalj hívást"
+  },
+  "contactUs": {
+    "contact": "Kapcsolat",
+    "increaseBusinessEfficiency": "Növeld üzleti hatékonyságod!",
+    "integratedSolutions": "Integrált megoldásaink segítségével automatizálhatod folyamataidat, növelheted ügyfélmegtartásod és valós idejű adatokat használhatsz fel döntéshozatalhoz. Kezdj el most!",
+    "simpleContentManagement": "Egyszerű tartalomkezelés",
+    "cmsDescription": "Intuitív CMS megoldásunkkal gyorsan készíthetsz és publikálhatsz tartalmakat.",
+    "customizableCRM": "Testreszabható CRM",
+    "crmDescription": "Testreszabható CRM-t kínálunk, amely megfelel üzleti igényeidnek.",
+    "automatedProcesses": "Automatizált folyamatok",
+    "rpaDescription": "RPA megoldásaink egyszerűsítik az ismétlődő feladatokat, időt és erőforrást takarítva meg.",
+    "bookAppointment": "Időpontfoglalás",
+    "dateLabel": "Dátum",
+    "selectDate": "Válassz dátumot",
+    "lastNameLabel": "Vezetéknév",
+    "firstNameLabel": "Keresztnév",
+    "lastNameRequired": "A vezetéknév megadása kötelező",
+    "firstNameRequired": "A keresztnév megadása kötelező",
+    "successfulBooking": "Sikeres foglalás!",
+    "soonWillContact": "Hamarosan felvesszük veled a kapcsolatot.",
+    "bookNow": "Foglalj most"
+  },
+  "faq": {
+    "faq": "Gyakran Ismételt Kérdések",
+    "heading": "Lépj szintet vállalkozásoddal!",
+    "description": "Fedezd fel platformunk CMS, CRM, RPA és analitikai megoldásait, hogy növeld vállalkozásod versenyképességét! Próbáld ki 14 napig ingyen!",
+    "question1": "Miért érdemes a platformunkat választani?",
+    "answer1": "A platformunk integrált megoldásokat kínál, amelyek egyszerűsítik az üzleti folyamatokat.",
+    "question2": "Hogyan segít a CMS funkció a tartalomkezelésben?",
+    "answer2": "A CMS lehetővé teszi a weboldal tartalmának egyszerű kezelését és frissítését.",
+    "question3": "Milyen előnyöket nyújt a CRM rendszer?",
+    "answer3": "A CRM rendszer javítja az ügyfélkapcsolatokat és növeli az ügyfélelégedettséget.",
+    "question4": "Mire jó az RPA a munkafolyamatok automatizálásában?",
+    "answer4": "Az RPA csökkenti az ismétlődő feladatok idejét és hibáit.",
+    "question5": "Hogyan integrálható a platform más rendszerekkel?",
+    "answer5": "A nyílt API lehetővé teszi a zökkenőmentes integrációt más szoftverekkel.",
+    "question6": "Milyen analitikai lehetőségek állnak rendelkezésre?",
+    "answer6": "A valós idejű analitika segít a megalapozott döntéshozatalban.",
+    "question7": "Milyen támogatást nyújtanak a felhasználóknak?",
+    "answer7": "24/7 ügyfélszolgálatot és részletes dokumentációt kínálunk.",
+    "question8": "Mennyibe kerül a platform használata?",
+    "answer8": "Rugalmas árazást kínálunk, különböző csomagokkal az igényekhez."
+  },
+  "footer": {
+    "companyName": "OrbitOps",
+    "companyDescription": "Integrált üzleti megoldásokat kínálunk egy platformon: CRM, CMS, RPA, analitika és integrációs lehetőségek segítségével automatizáljuk folyamataidat, növeljük a hatékonyságot, és valós idejű adatokat biztosítunk döntéseidhez.",
+    "address": {
+      "line1": "2440",
+      "line2": "Százhalombatta",
+      "line3": "Tél utca 41."
+    },
+    "links": {
+      "termsOfUse": "Felhasználási feltételek",
+      "privacyPolicy": "Adatkezelési nyilatkozat"
+    },
+    "navigation": {
+      "home": "Kezdőlap",
+      "platform": {
+        "title": "Platform",
+        "description": "Próbáld ki szolgáltatásunk, foglalj telefonos időpontot.",
+        "items": {
+          "features": "Funkciók",
+          "statistics": "Statisztikák",
+          "technologies": "Technológiák",
+          "prices": "Árak"
+        }
+      },
+      "company": {
+        "title": "Cég",
+        "description": "További információért, foglalj telefonos időpontot.",
+        "items": {
+          "testimonials": "Visszajelzések",
+          "faq": "FAQ",
+          "contact": "Kapcsolatfelvétel"
+        }
+      }
+    }
+  }
+}

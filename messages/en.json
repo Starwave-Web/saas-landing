@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "title": "OrbitOps",
+    "description": "Innovative enterprise management system."
+  },
+  "navbar": {
+    "home": "Home",
+    "platform": "Platform",
+    "platformDescription": "Try our service, book a phone appointment.",
+    "features": "Features",
+    "stats": "Statistics",
+    "technologies": "Technologies",
+    "prices": "Prices",
+    "company": "Company",
+    "companyDescription": "For more information, book a phone appointment.",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contactUs": "Contact Us",
+    "bookAppointment": "Book an appointment",
+    "demo": "Book a demo",
+    "orbitOps": "OrbitOps"
+  },
+  "modeToggle": {
+    "selectTheme": "Select a theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "whatCanItDo": "What can it do?",
+    "platformFeatures": "Platform features",
+    "integratedBusinessSolutions": "We offer integrated business solutions on one platform: using CRM, CMS, RPA, analytics, and integration capabilities, we automate your processes, increase efficiency, and provide real-time data for your decisions.",
+    "requestCallback": "Request a callback",
+    "register": "Register",
+    "cms": "CMS",
+    "crm": "CRM",
+    "rpa": "RPA",
+    "automation": "Automation",
+    "analytics": "Analytics"
+  },
+  "features": {
+    "badge": "Features",
+    "headline": "Innovative solutions",
+    "subheadline": "Book a demo for more information!",
+    "fullIntegrationTitle": "Full integration",
+    "fullIntegrationDescription": "We ensure seamless data flow between various systems on a single platform.",
+    "automatedProcessesTitle": "Automated processes",
+    "automatedProcessesDescription": "Our RPA solutions simplify repetitive tasks, saving time and resources.",
+    "realTimeAnalyticsTitle": "Real-time analytics",
+    "realTimeAnalyticsDescription": "Get instant insights into your data with dynamic and visual reports.",
+    "customizableCrmTitle": "Customizable CRM",
+    "customizableCrmDescription": "We offer a personalized customer relationship management solution tailored to your unique business needs.",
+    "easyContentManagementTitle": "Easy content management",
+    "easyContentManagementDescription": "Our intuitive CMS solution allows quick content creation and publishing.",
+    "dataDrivenDecisionMakingTitle": "Data-driven decision-making",
+    "dataDrivenDecisionMakingDescription": "With our powerful analytics tools, you can easily track the progress of your business performance."
+  },
+  "stats": {
+    "monthlyActiveUsers": {
+      "value": "5,000",
+      "change": "+20.1%",
+      "description": "monthly active users"
+    },
+    "dailyActiveUsers": {
+      "value": "2,105",
+      "change": "+5%",
+      "description": "daily active users"
+    },
+    "averageRevenueGrowth": {
+      "value": "923,520 Ft",
+      "change": "+40%",
+      "description": "average revenue growth for our clients"
+    },
+    "userAcquisitionCost": {
+      "value": "3,000 Ft",
+      "change": "-20%",
+      "description": "user acquisition cost per user"
+    }
+  },
+  "testimonials": {
+    "title": "Many businesses have chosen us.",
+    "items": [
+      {
+        "id": "anna",
+        "title": "Simple integration, great possibilities",
+        "description": "We integrated our systems with the platform within a few days. It is very easy to use.",
+        "name": "Anna Kovács"
+      },
+      {
+        "id": "laszlo",
+        "title": "Quick response to our needs",
+        "description": "Analytics provides instant insights to improve our operations.",
+        "name": "László Tóth"
+      },
+      {
+        "id": "eszter",
+        "title": "Automated processes, time savings",
+        "description": "With RPA solutions, we saved a lot of administrative work.",
+        "name": "Eszter Nagy"
+      },
+      {
+        "id": "zoltan",
+        "title": "CRM that’s truly customizable",
+        "description": "We easily customized the CRM to perfectly fit our business processes.",
+        "name": "Zoltán Szabó"
+      },
+      {
+        "id": "kati",
+        "title": "Efficient content management",
+        "description": "The CMS system is intuitive and makes publishing content across multiple channels easy.",
+        "name": "Katalin Varga"
+      }
+    ]
+  },
+  "builtWith": {
+    "title": "Used technologies"
+  },
+  "pricing": {
+    "badge": "Prices",
+    "chooseTheRightOne": "Choose the one that's right for you!",
+    "description": "Explore our platform's CMS, CRM, RPA, and analytics solutions to boost your business's competitiveness! Try it for 14 days free!",
+    "startup": {
+      "title": "Startup",
+      "description": "Launch your business with easy-to-use tools and support!",
+      "price": "3,000 HUF",
+      "period": "per month"
+    },
+    "kkv": {
+      "title": "SME",
+      "description": "Increase efficiency with tailored solutions and integrated features!",
+      "price": "6,000 HUF",
+      "period": "per month"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Maximize your potential with exclusive features and exceptional support!",
+      "price": "8,000 HUF",
+      "period": "per month"
+    },
+    "features": "Features",
+    "crm": "CRM",
+    "cms": "CMS",
+    "rpa": "RPA",
+    "people": "People",
+    "analytics": "Analytics",
+    "integrationPlatform": "Integration Platform"
+  },
+  "cta": {
+    "badge": "Get Started!",
+    "heading": "Automate your business now!",
+    "description": "Reduce your administrative workload, increase your revenue, and get the most out of your business data with our integrated platform! Try it for free now!"
+  },
+  "buttons": {
+    "tryItOut": "Try it out",
+    "contactUs": "Contact us",
+    "askForCallback": "Ask for a callback",
+    "register": "Register",
+    "faq": "Got a question? Book a call"
+  },
+  "contactUs": {
+    "contact": "Contact",
+    "increaseBusinessEfficiency": "Increase your business efficiency!",
+    "integratedSolutions": "With our integrated solutions, you can automate your processes, improve customer retention, and make data-driven decisions in real-time. Start now!",
+    "simpleContentManagement": "Simple content management",
+    "cmsDescription": "Our intuitive CMS solution allows you to create and publish content quickly.",
+    "customizableCRM": "Customizable CRM",
+    "crmDescription": "We offer customizable CRM to suit the unique needs of your business.",
+    "automatedProcesses": "Automated processes",
+    "rpaDescription": "Our RPA solutions simplify repetitive tasks, saving time and resources.",
+    "bookAppointment": "Book an appointment",
+    "dateLabel": "Date",
+    "selectDate": "Select a date",
+    "lastNameLabel": "Last Name",
+    "firstNameLabel": "First Name",
+    "lastNameRequired": "Last name is required",
+    "firstNameRequired": "First name is required",
+    "successfulBooking": "Successful booking!",
+    "soonWillContact": "We will contact you shortly.",
+    "bookNow": "Book Now"
+  },
+  "faq": {
+    "faq": "FAQ",
+    "heading": "Level up your business!",
+    "description": "Discover our platform’s CMS, CRM, RPA, and analytics solutions to increase your business’s competitiveness! Try it for free for 14 days!",
+    "question1": "Why should I choose your platform?",
+    "answer1": "Our platform offers integrated solutions that simplify business processes.",
+    "question2": "How does the CMS feature help with content management?",
+    "answer2": "The CMS allows for easy management and updates of website content.",
+    "question3": "What benefits does the CRM system provide?",
+    "answer3": "The CRM system improves customer relations and increases customer satisfaction.",
+    "question4": "How does RPA help in automating workflows?",
+    "answer4": "RPA reduces the time and errors of repetitive tasks.",
+    "question5": "How can the platform be integrated with other systems?",
+    "answer5": "The open API allows seamless integration with other software.",
+    "question6": "What analytics options are available?",
+    "answer6": "Real-time analytics help in data-driven decision-making.",
+    "question7": "What kind of support do you offer to users?",
+    "answer7": "We offer 24/7 customer service and detailed documentation.",
+    "question8": "How much does the platform cost?",
+    "answer8": "We offer flexible pricing with different packages to suit your needs."
+  },
+  "footer": {
+    "companyName": "OrbitOps",
+    "companyDescription": "We offer integrated business solutions on one platform: CRM, CMS, RPA, analytics, and integration possibilities to automate your processes, increase efficiency, and provide real-time data for your decisions.",
+    "address": {
+      "line1": "2440",
+      "line2": "Százhalombatta",
+      "line3": "Tél utca 41."
+    },
+    "links": {
+      "termsOfUse": "Terms of Use",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "navigation": {
+      "home": "Home",
+      "platform": {
+        "title": "Platform",
+        "description": "Try out our service, book a phone consultation.",
+        "items": {
+          "features": "Features",
+          "statistics": "Statistics",
+          "technologies": "Technologies",
+          "prices": "Prices"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "description": "For more information, book a phone consultation.",
+        "items": {
+          "testimonials": "Testimonials",
+          "faq": "FAQ",
+          "contact": "Contact Us"
+        }
+      }
+    }
+  }
+}
