@@ -3,54 +3,55 @@ import { SECTIONS } from "@/src/constants";
 import { scrollToSection } from "@/src/lib/utils";
 import { Orbit } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 export const Footer = () => {
-
-  const felhasznalasi_felt = "/legal/felhasznalasi_felt.pdf";
-  const adatkezelesi_nyil = "/legal/adatkezelesi_nyil.pdf";
+  const t = useTranslations('footer');
+  const felhasznalasiFelt = "/legal/felhasznalasi_felt.pdf";
+  const adatkezelesiNyil = "/legal/adatkezelesi_nyil.pdf";
 
   const navigationItems = [
     {
-      title: "Kezdőlap",
+      title: t('navigation.home'),
       sectionName: SECTIONS.HERO,
       description: "",
     },
     {
-      title: "Platform",
-      description: "Probáld ki szolgáltatásunk, foglalj telefonos időpontot.",
+      title: t('navigation.platform.title'),
+      description: t('navigation.platform.description'),
       items: [
         {
-          title: "Funkciók",
+          title: t('navigation.platform.items.features'),
           sectionName: SECTIONS.FEATURES,
         },
         {
-          title: "Statisztikák",
+          title: t('navigation.platform.items.statistics'),
           sectionName: SECTIONS.STATS,
         },
         {
-          title: "Technológiák",
+          title: t('navigation.platform.items.technologies'),
           sectionName: SECTIONS.TECHNOLOGIES,
         },
         {
-          title: "Árak",
+          title: t('navigation.platform.items.prices'),
           sectionName: SECTIONS.PRICES,
         },
       ],
     },
     {
-      title: "Cég",
-      description: "További információért, foglalj telefonos időpontot.",
+      title: t('navigation.company.title'),
+      description: t('navigation.company.description'),
       items: [
         {
-          title: "Visszajelzések",
+          title: t('navigation.company.items.testimonials'),
           sectionName: SECTIONS.TESTIMONIALS,
         },
         {
-          title: "FAQ",
+          title: t('navigation.company.items.faq'),
           sectionName: SECTIONS.FAQ,
         },
         {
-          title: "Kapcsolatfelvétel",
+          title: t('navigation.company.items.contact'),
           sectionName: SECTIONS.CONTACT_US,
         },
       ],
@@ -65,16 +66,13 @@ export const Footer = () => {
             <div className="flex gap-2 flex-col">
               <div className="flex items-center gap-2">
                 <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular text-left">
-                  OrbitOps
+                  {t('companyName')}
                 </h2>
-                <Orbit className=" h-10 w-10" />
+                <Orbit className="h-10 w-10" />
               </div>
 
               <p className="text-lg max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                Integrált üzleti megoldásokat kínálunk egy platformon: CRM, CMS,
-                RPA, analitika és integrációs lehetőségek segítségével
-                automatizáljuk folyamataidat, növeljük a hatékonyságot, és valós
-                idejű adatokat biztosítunk döntéseidhez.
+                {t('companyDescription')}
               </p>
             </div>
             <div className="flex gap-20 flex-row">
@@ -84,11 +82,11 @@ export const Footer = () => {
                 <p>Tél utca 41.</p>
               </div>
               <div className="flex flex-col text-sm max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                <Link target="_blank" href={felhasznalasi_felt}>
-                  Felhasználási feltételek
+                <Link target="_blank" href={felhasznalasiFelt}>
+                  {t('links.termsOfUse')}
                 </Link>
-                <Link target="_blank" href={adatkezelesi_nyil}>
-                  Adatkezelési nyilatkozat
+                <Link target="_blank" href={adatkezelesiNyil}>
+                  {t('links.privacyPolicy')}
                 </Link>
               </div>
             </div>

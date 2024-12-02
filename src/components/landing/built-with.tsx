@@ -9,10 +9,13 @@ import {
 } from "@/src/components/ui/carousel";
 import Image from "next/image";
 import { SECTIONS } from "@/src/constants";
+import { useTranslations } from "next-intl";
 
 const BuiltWith = () => {
+  const t = useTranslations('builtWith')
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  
 
   useEffect(() => {
     if (!api) {
@@ -53,7 +56,7 @@ const BuiltWith = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-4 md:flex-row items-center">
           <h3 className="text-xl tracking-tighter lg:max-w-xl font-regular text-left">
-            Használt technológiák
+            {t('title')}
           </h3>
           <div className="relative w-full col-span-4">
             <div className="bg-gradient-to-r from-background via-white/0 to-background z-10 absolute left-0 top-0 right-0 bottom-0 w-full h-full"></div>

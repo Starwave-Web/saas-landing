@@ -6,17 +6,23 @@ import Footer from "@/src/components/footer";
 import { Toaster } from "@/src/components/ui/toaster";
 import { ThemeProvider } from "@/src/components/common/theme-provider";
 import { routing } from "@/src/i18n/routing";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "OrbitOps",
-  description: "Innovatív vállalatirányítási rendszer.",
-};
+
+//@ts-expect-error locale can be any
+export async function generateMetadata({params: {locale}}) {
+  const t = await getTranslations({locale, namespace: 'metadata'});
+ 
+  return {
+    title: t('title'),
+    description: t('description')
+  };
+}
 
 export default async function RootLayout({
   children,

@@ -1,9 +1,9 @@
 
 import Image from "next/image";
-import Image1 from "@/assets/gallery/image1.png"
-import Image2 from "@/assets/gallery/image2.png"
-import Image3 from "@/assets/gallery/image3.png"
-import Image4 from "@/assets/gallery/image4.png"
+import Image1 from "@/src/assets/gallery/image1.png"
+import Image2 from "@/src/assets/gallery/image2.png"
+import Image3 from "@/src/assets/gallery/image3.png"
+import Image4 from "@/src/assets/gallery/image4.png"
 
 
 export const Gallery = () => (

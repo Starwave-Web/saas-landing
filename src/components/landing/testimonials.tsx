@@ -11,10 +11,12 @@ import { User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/src/components/ui/avatar";
 
 import { SECTIONS } from "@/src/constants";
+import { useTranslations } from "next-intl";
 
 const Testimonials = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const t = useTranslations("testimonials");
 
   useEffect(() => {
     if (!api) {
@@ -35,43 +37,43 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: "anna",
-      title: "Egyszerű integráció, hatalmas lehetőségek",
+      title: t.raw('items')[0].title,
       description:
-        "A platformunk rendszereit pár nap alatt integráltuk. Nagyon könnyű használni.",
+      t.raw('items')[0].description,
       avatarImageUrl: "/testimonials/anna.jpg",
-      name: "Kovács Anna",
+      name: t.raw('items')[0].name,
     },
     {
       id: "laszlo",
-      title: "Gyorsan reagál az igényeinkre",
+      title: t.raw('items')[1].title,
       description:
-        "Az analitika segítségével azonnali betekintést kapunk a működésünk javításához.",
+      t.raw('items')[1].description,
       avatarImageUrl: "/testimonials/laszlo.jpg",
-      name: "Tóth László",
+      name: t.raw('items')[1].name,
     },
     {
       id: "eszter",
-      title: "Automatizált folyamatok, időmegtakarítás",
+      title: t.raw('items')[2].title,
       description:
-        "Az RPA megoldásokkal rengeteg adminisztrációs munkát spóroltunk meg.",
+      t.raw('items')[2].description,
       avatarImageUrl: "/testimonials/eszter.jpg",
-      name: "Nagy Eszter",
+      name: t.raw('items')[2].name,
     },
     {
       id: "zoltan",
-      title: "CRM, ami tényleg testreszabható",
+      title: t.raw('items')[3].title,
       description:
-        "Könnyedén testreszabtuk a CRM-et, hogy tökéletesen illeszkedjen az üzleti folyamatainkhoz.",
+      t.raw('items')[3].description,
       avatarImageUrl: "/testimonials/zoltan.jpg",
-      name: "Szabó Zoltán",
+      name: t.raw('items')[3].name,
     },
     {
       id: "kati",
-      title: "Hatékony tartalomkezelés",
+      title: t.raw('items')[4].title,
       description:
-        "A CMS rendszer intuitív, könnyű vele tartalmakat publikálni több csatornán.",
+      t.raw('items')[4].description,
       avatarImageUrl: "/testimonials/kati.jpg",
-      name: "Varga Katalin",
+      name: t.raw('items')[4].name,
     },
   ];
 
@@ -100,7 +102,7 @@ const Testimonials = () => {
                       <p className="flex flex-row gap-2 text-sm items-center">
                         <Avatar className="h-6 w-6">
                           <AvatarImage className="object-cover" src={testimonial.avatarImageUrl} />
-                          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                          <AvatarFallback>T</AvatarFallback>
                         </Avatar>
                         <span>{testimonial.name}</span>
                       </p>

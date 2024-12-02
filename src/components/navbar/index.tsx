@@ -14,50 +14,53 @@ import { useState } from "react";
 import { ModeToggle } from "../common/toggle-theme";
 import { scrollToSection } from "@/src/lib/utils";
 import { SECTIONS } from "@/src/constants";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
+  const t = useTranslations("navbar");
+
   const navigationItems = [
     {
-      title: "Kezdőlap",
+      title: t("home"),
       sectionName: SECTIONS.HERO,
       description: "",
     },
     {
-      title: "Platform",
-      description: "Probáld ki szolgáltatásunk, foglalj telefonos időpontot.",
+      title: t("platform"),
+      description: t("platformDescription"),
       items: [
         {
-          title: "Funkciók",
+          title: t("features"),
           sectionName: SECTIONS.FEATURES,
         },
         {
-          title: "Statisztikák",
+          title: t("stats"),
           sectionName: SECTIONS.STATS,
         },
         {
-          title: "Technológiák",
+          title: t("technologies"),
           sectionName: SECTIONS.TECHNOLOGIES,
         },
         {
-          title: "Árak",
+          title: t("prices"),
           sectionName: SECTIONS.PRICES,
         },
       ],
     },
     {
-      title: "Cég",
-      description: "További információért, foglalj telefonos időpontot.",
+      title: t("company"),
+      description: t("companyDescription"),
       items: [
         {
-          title: "Visszajelzések",
+          title: t("testimonials"),
           sectionName: SECTIONS.TESTIMONIALS,
         },
         {
-          title: "FAQ",
+          title: t("faq"),
           sectionName: SECTIONS.FAQ,
         },
         {
-          title: "Kapcsolatfelvétel",
+          title: t("contactUs"),
           sectionName: SECTIONS.CONTACT_US,
         },
       ],
@@ -95,8 +98,12 @@ const Navbar = () => {
                                 {item.description}
                               </p>
                             </div>
-                            <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)} size="sm" className="mt-10">
-                              Foglalj egy időpontot
+                            <Button
+                              onClick={() => scrollToSection(SECTIONS.CONTACT_US)}
+                              size="sm"
+                              className="mt-10"
+                            >
+                              {t("bookAppointment")}
                             </Button>
                           </div>
                           <div className="flex flex-col text-sm h-full justify-start">
@@ -122,17 +129,26 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div onClick={() => scrollToSection(SECTIONS.HERO)} className="flex gap-1 lg:justify-center cursor-pointer">
-          <p className="font-semibold">OrbitOps</p>
+        <div
+          onClick={() => scrollToSection(SECTIONS.HERO)}
+          className="flex gap-1 lg:justify-center cursor-pointer"
+        >
+          <p className="font-semibold">{t("orbitOps")}</p>
           <Orbit className=" dark:text-white" />
         </div>
         <div className="flex justify-end w-full gap-4">
           <ModeToggle />
-          <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)} variant="ghost" className="hidden md:inline">
-            Foglalj egy demo-t
+          <Button
+            onClick={() => scrollToSection(SECTIONS.CONTACT_US)}
+            variant="ghost"
+            className="hidden md:inline"
+          >
+            {t("demo")}
           </Button>
           <div className="border-r hidden md:inline">
-            <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)}>Kapcsolatfelvétel</Button>
+            <Button onClick={() => scrollToSection(SECTIONS.CONTACT_US)}>
+              {t("contactUs")}
+            </Button>
           </div>
         </div>
         <div className="flex w-12 shrink lg:hidden items-end justify-end">
